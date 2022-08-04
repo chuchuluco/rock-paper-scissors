@@ -10,31 +10,42 @@ function getPlayerChoice() {
     return choice;
 }
 
-const computerSelection = getComputerChoice();
-const playerSelection = getPlayerChoice();
+let playerScore = 0
+let computerScore = 0
 
 function playRound(playerSelection, computerSelection) {
+    
     if (playerSelection == computerSelection) {
         return "Wow! It's a Tie."
     } else if (playerSelection == "rock" && computerSelection == "scissors") {
-        return "You Win! Rock beats Scissors"
+        playerScore ++
+        return "You Win! Rock beats Scissors" + " your score is: " + playerScore
     } else if (playerSelection == "rock" && computerSelection == "paper") {
-        return "You Lose! Paper beats Rock"
+        computerScore ++
+        return "You Lose! Paper beats Rock" + " your score is: " + playerScore
     } else if (playerSelection == "paper" && computerSelection == "rock") {
-        return "You Win! Paper beats Rock"
+        playerScore ++
+        return "You Win! Paper beats Rock" + " your score is: " + playerScore
     } else if (playerSelection == "paper" && computerSelection == "scissors") {
-        return "You Lose! Scissors beats Paper"
+        computerScore ++
+        return "You Lose! Scissors beats Paper" + " your score is: " + playerScore
     } else if (playerSelection == "scissors" && computerSelection == "rock") {
-        return "You Lose! Rock beats Scissors"
+        computerScore ++
+        return "You Lose! Rock beats Scissors" + " your score is: " + playerScore
     } else if (playerSelection == "scissors" && computerSelection == "paper") {
-        return "You Win! Scissors beats paper"
-    } 
+        playerScore ++
+        return "You Win! Scissors beats paper" + " your score is: " + playerScore
+    }
+       
 }
 
 function game() {
     
     for (let i = 0; i < 5; i++) {
-        playRound()
+        const computerSelection = getComputerChoice();
+        const playerSelection = getPlayerChoice();
+        gameState = playRound(playerSelection, computerSelection)
+        console.log(gameState)
      }
     
 }
