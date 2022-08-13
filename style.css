@@ -31,7 +31,7 @@ h1 {
 
 .container {
     color: white;
-    height: 400px;
+    height: 460px;
     width: 550px;
     background-color: var(--blue);
     margin: 25px auto;
@@ -107,5 +107,14 @@ footer .fa-regular {
 }
 
 .scores {
+    display: flex; 
+    width: 400px;
+    align-self: center;
+    justify-content: space-around;
+    padding: 15px;
+}
+
+.player-score {
     display: flex;
+    justify-content: space-between;
 }

@@ -29,12 +29,18 @@ buttons.forEach((button) => {
     if(button.id == "rock") {
         result.textContent = gameRound("rock")
         player.innerHTML = rockIcon
+        scorePlayer.textContent = `Player: ${playerScore}`
+        scoreComputer.textContent = `Computer: ${playerScore}`
     } else if(button.id == "paper") {
         result.textContent = gameRound("paper")
         player.innerHTML = paperIcon
+        scorePlayer.textContent = `Player: ${playerScore}`
+        scoreComputer.textContent = `Computer: ${playerScore}`
     } else if(button.id == "scissors") {
         player.innerHTML = scissorsIcon
         result.textContent = gameRound("scissors")
+        scorePlayer.textContent = `Player: ${playerScore}`
+        scoreComputer.textContent = `Computer: ${playerScore}`
     }
   });
 });
@@ -43,6 +49,8 @@ const result = document.querySelector(".result-prompt");
 const player = document.querySelector(".player")
 const computerChoose = document.querySelector(".computer")
 const container = document.querySelector('.container')
+const scorePlayer = document.querySelector('.player-score')
+const scoreComputer = document.querySelector('.computer-score')
 
 
 function gameRound(playerSelect) {
