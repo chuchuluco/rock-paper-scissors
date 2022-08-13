@@ -50,6 +50,7 @@ function gameRound(playerSelect) {
     let computer = getComputerChoice();
     compSpan(computer);
     if (playerSelect == computer) {
+        container.style.backgroundColor = blue;
         return "Wow! It's a Tie."
     } else if (playerSelect == "rock" && computer == "scissors") {
         playerScore ++
