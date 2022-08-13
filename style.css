@@ -30,6 +30,7 @@ h1 {
 }
 
 .container {
+    color: white;
     height: 400px;
     width: 550px;
     background-color: var(--blue);
@@ -103,4 +104,8 @@ button .fa-regular:hover {
 
 footer .fa-regular {
     text-shadow: none;
+}
+
+.scores {
+    display: flex;
 }
