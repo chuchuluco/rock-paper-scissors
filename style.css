@@ -43,10 +43,24 @@ h1 {
 }
 
 #result {
-    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-size: 20px;
     border: 2px solid black;
     padding: 5px;
     margin: 50px auto 100px;
+}
+.vs {
+    display: flex;
+}
+
+.player {
+    border: 2px solid black;
+}
+.computer {
+    border: 2px solid black;
 }
 
 .buttons-container {
