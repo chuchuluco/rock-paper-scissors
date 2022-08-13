@@ -45,7 +45,6 @@ const computerChoose = document.querySelector(".computer")
 const container = document.querySelector('.container')
 
 
-
 function gameRound(playerSelect) {
     let computer = getComputerChoice();
     compSpan(computer);
