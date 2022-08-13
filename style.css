@@ -82,3 +82,7 @@ button:hover {
 .fa-hand-scissors {
     transform: rotate(90deg);
 }
+
+footer .fa-regular {
+    text-shadow: none;
+}
